@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgjhph7w1tp5c"]
+
+[ext_resource type="Texture2D" uid="uid://cln85b03irb4b" path="res://Mask (32x32).png" id="1_084s8"]
+[ext_resource type="Script" path="res://scenes/maskguy.gd" id="1_tyvjo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_harw8"]
+size = Vector2(44.75, 71)
+
+[node name="CharacterBody2D2" type="CharacterBody2D"]
+script = ExtResource("1_tyvjo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(308, 371)
+scale = Vector2(2.25, 2.59375)
+texture = ExtResource("1_084s8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(309.375, 372.5)
+shape = SubResource("RectangleShape2D_harw8")
